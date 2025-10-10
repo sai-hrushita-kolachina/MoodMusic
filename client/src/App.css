@@ -1,0 +1,250 @@
+/* ===================== */
+/* Animated Gradient Body */
+/* ===================== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+
+  /* Animated gradient background */
+  background: linear-gradient(-45deg, #1db954, #1ed760, #191414, #121212);
+  background-size: 400% 400%;
+  animation: animatedGradient 20s ease infinite;
+}
+
+/* Gradient Animation */
+@keyframes animatedGradient {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 50%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===================== */
+/* Flying Music Notes     */
+/* ===================== */
+.music-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.music-background .note {
+  position: absolute;
+  color: rgba(0, 0, 0, 1); /* Dark music symbols */
+  font-size: 20px;
+  animation: floatNotes linear infinite;
+}
+
+@keyframes floatNotes {
+  0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  50% { opacity: 0.5; transform: translateY(50vh) rotate(180deg); }
+  100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
+}
+
+/* ===================== */
+/* Centered Container     */
+/* ===================== */
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  z-index: 10;
+}
+
+/* Left & Right Column */
+.left-column {
+  flex: 1;
+  max-width: 450px;
+}
+
+.right-column {
+  flex: 1;
+  max-width: 450px;
+  background: rgba(0,0,0,0.7);
+  border-radius: 20px;
+  padding: 30px;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.songs-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1ed760;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ===================== */
+/* Container Card          */
+/* ===================== */
+.container {
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  padding: 40px 30px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 1s ease;
+  margin: auto;
+}
+
+/* Title */
+h1 {
+  font-size: 32px;
+  color: #1ed760;
+  margin-bottom: 25px;
+  animation: slideDown 1s ease;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Webcam Video */
+.webcam {
+  width: 100%;
+  border-radius: 15px;
+  border: 3px solid #1ed760;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.webcam:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(30, 215, 96, 0.5);
+}
+
+/* Buttons */
+button {
+  background: #1ed760;
+  color: #191414;
+  border: none;
+  padding: 14px 25px;
+  font-size: 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #1db954;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 215, 96, 0.5);
+}
+
+button:disabled {
+  background: #74d49c;
+  cursor: not-allowed;
+}
+
+/* Detected Emotion Text */
+.emotion-text {
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  animation: fadeInText 1s ease;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Song List */
+.song-list {
+  margin-top: 25px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.song-list li {
+  background: rgba(30, 215, 96, 0.1);
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  animation: songAppear 0.5s ease forwards;
+}
+
+.song-list li:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(30, 215, 96, 0.4);
+  background: rgba(30, 215, 96, 0.2);
+}
+
+.song-name {
+  font-weight: 700;
+  color: #fff;
+}
+
+.song-artist {
+  font-size: 14px;
+  color: #e0e0e0;
+  margin-top: 3px;
+}
+
+audio {
+  outline: none;
+  border-radius: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #1ed760;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .centered-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right-column {
+    max-height: none;
+    width: 90%;
+  }
+
+  .left-column {
+    width: 90%;
+  }
+}
