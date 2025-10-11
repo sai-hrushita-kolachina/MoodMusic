@@ -3,7 +3,7 @@ setuptools
 wheel
 flask==3.1.2
 flask-cors==6.0.1
-numpy==1.26.4 --only-binary=:all:
+numpy>=2.1.0,<2.4 --only-binary=:all:
 opencv-python==4.8.1.78
 fer==22.5.1
 mtcnn==0.1.1
