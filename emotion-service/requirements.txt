@@ -1,11 +1,12 @@
-gunicorn
-setuptools
-wheel
+
 flask==3.1.2
 flask-cors==6.0.1
-numpy>=2.1.0,<2.4 --only-binary=:all:
+numpy>=1.26.0,<2.4
 opencv-python==4.8.1.78
-fer==22.5.1
+# fer==22.5.1
 mtcnn==0.1.1
-moviepy==1.0.3
-tensorflow==2.13.0
+tensorflow-cpu>=2.14
+Pillow==10.0.0
+torch
+torchvision
+facenet-pytorch

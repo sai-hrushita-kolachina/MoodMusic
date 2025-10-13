@@ -32,7 +32,7 @@ export default function EmotionMusicApp() {
 
       // 3) Request songs from Node backend
       const songsRes = await axios.get(
-        `http://localhost:5000/api/music/${detected}`
+        ` http://localhost:5000/api/music/${detected}`
       );
       setSongs(songsRes.data.songs || songsRes.data);
     } catch (err) {
