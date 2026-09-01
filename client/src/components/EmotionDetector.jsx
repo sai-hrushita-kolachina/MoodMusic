@@ -27,12 +27,13 @@ export default function EmotionMusicApp() {
         "http://localhost:5001/detect_emotion",
         { image: imageSrc }
       );
+      
       const detected = emotionRes.data.emotion;
       setEmotion(detected);
 
       // 3) Request songs from Node backend
       const songsRes = await axios.get(
-        ` http://localhost:5000/api/music/${detected}`
+        `http://localhost:5000/api/music/${detected}`
       );
       setSongs(songsRes.data.songs || songsRes.data);
     } catch (err) {

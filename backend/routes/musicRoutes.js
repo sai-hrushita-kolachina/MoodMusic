@@ -10,6 +10,7 @@ const emotionToQuery = {
   angry: 'rock',
   neutral: 'chill',
   fear: 'ambient',
+  
   surprise: 'electronic',
   disgust: 'metal'
 };
