@@ -333,10 +333,4 @@ GitHub: https://github.com/sai-hrushita-kolachina
 
 ---
 
-## ⭐ Support
 
-If you like this project, consider giving it a ⭐ on GitHub!
-
----
-
-**Made with ❤️, AI, and Music 🎵**
